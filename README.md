@@ -25,5 +25,3 @@ Canary Tokens: `senhas.xlsx`, `aws_keys.txt`, `backup.sql` | Honeypot low-intera
 ### 🚀 Como rodar
 ```bash
 python sabo_x_pleno.py
-EOF
-E0F
