@@ -1,0 +1,18 @@
+detection:
+  ttp: T1110 Credential
+  action: block_ip
+detection:
+  ttp: T1110 Credential
+  action: block_ip
+detection:
+  ttp: T1190 Exploit
+  action: block_ip
+detection:
+  ttp: T1021.004 SSH Brute
+  action: block_ip
+detection:
+  ttp: T1110 Credential
+  action: block_ip
+detection:
+  ttp: T1190 Exploit
+  action: block_ip
