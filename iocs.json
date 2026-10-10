@@ -1,0 +1,12 @@
+{"ttp": "T1021.004 - SSH", "timestamp": "2026-10-09 23:45:54.016654", "status": "blocked"}
+{"ttp": "T1190 - Exploit", "timestamp": "2026-10-09 23:45:55.019195", "status": "blocked"}
+{"ttp": "T1110 - Brute", "timestamp": "2026-10-09 23:45:56.020872", "status": "blocked"}
+{"ttp": "T1190 - Exploit", "timestamp": "2026-10-09 23:48:00.846530", "status": "blocked"}
+{"ttp": "T1110 - Brute", "timestamp": "2026-10-09 23:48:01.849584", "status": "blocked"}
+{"ttp": "T1110 - Brute", "timestamp": "2026-10-09 23:48:02.850940", "status": "blocked"}
+{"lab_ip": "127.0.0.1", "ttp": "T1190", "timestamp": "2026-10-09 23:52:41.070979", "status": "blocked_lab"}
+{"lab_ip": "127.0.0.1", "ttp": "T1021.004", "timestamp": "2026-10-09 23:52:42.072993", "status": "blocked_lab"}
+{"lab_ip": "127.0.0.1", "ttp": "T1190", "timestamp": "2026-10-09 23:52:43.075253", "status": "blocked_lab"}
+{"lab_ip": "127.0.0.1", "ttp": "T1190", "timestamp": "2026-10-09 23:53:31.349144", "status": "blocked_lab"}
+{"lab_ip": "127.0.0.1", "ttp": "T1110", "timestamp": "2026-10-09 23:53:32.354765", "status": "blocked_lab"}
+{"lab_ip": "127.0.0.1", "ttp": "T1021.004", "timestamp": "2026-10-09 23:53:33.356992", "status": "blocked_lab"}

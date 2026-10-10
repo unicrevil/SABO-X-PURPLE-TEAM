@@ -1,39 +1,45 @@
-# SABO-X SOC PLENO PURPLE TEAM - Andre Unic (Unicrevil)
-import json, random, time
+import random
+import time
+import json
 from datetime import datetime
 
-print("""
- ███████╗ █████╗ ██████╗  ██████╗       ██╗  ██╗
- ██╔════╝██╔══██╗██╔══██╗██╔═══██╗      ╚██╗██╔╝
- ███████╗███████║██████╔╝██║   ██║█████╗╚███╔╝ 
- ╚════██║██╔══██║██╔══██╗██║   ██║╚════╝██╔██╗ 
- ███████║██║  ██║██████╔╝╚██████╔╝     ██╔╝ ██╗
- ╚══════╝╚═╝  ╚═╝╚═════╝  ╚═════╝      ╚═╝  ╚═╝
- SOC PLENO PURPLE TEAM - 120% MODE
- by Andre Unic (Unicrevil)
-""")
+LAB_IP = "127.0.0.1"
 
-# PURPLE TEAM LOGIC
+BANNER = r"""
+  ____   _    ____   ___        __  __
+ / ___| / \  | __ ) / _ \      |  \/  |
+ \___ \ / _ \ |  _ \| | | |_____| |\/| |
+  ___) / ___ \| |_) | |_| |_____| |  | |
+ |____/_/   \_\____/ \___/      |_|  |_|
+ SOC PLENO PURPLE TEAM - Andre Unic
+ SABO-X - Deception Grid + SOC 120%
+"""
+print(BANNER)
+print(f"[LAB] Ambiente: {LAB_IP}")
+
 def red_team_emulate():
-    ttp = random.choice(["T1021.004 SSH Brute", "T1190 Exploit", "T1110 Credential"])
-    print(f"[RED] Emulando ataque: {ttp} - Atacando honeypot local...")
+    ttp = random.choice(["T1021.004", "T1190", "T1110"])
+    print(f"[RED] Simulacao defensiva: {ttp} no lab local")
     return ttp
 
 def blue_team_detect(ttp):
-    print(f"[BLUE] Detectado TTP {ttp} | Criando detecção Sigma + Bloqueio")
-    rule = f'detection:\n  ttp: {ttp}\n  action: block_ip'
-    open("sigma_rule.yml","a").write(rule+"\n")
+    print(f"[BLUE] Detectado: {ttp} | Lab {LAB_IP} | Gerando Sigma + Log")
+    rule = f"detection:\n  lab_ip: {LAB_IP}\n  ttp: {ttp}\n  action: block\n  time: {datetime.now()}\n"
+    with open("sigma_rule.yml", "a") as f:
+        f.write(rule + "\n")
+    log = {"lab_ip": LAB_IP, "ttp": ttp, "timestamp": str(datetime.now()), "status": "blocked_lab"}
+    with open("iocs.json", "a") as f:
+        f.write(json.dumps(log) + "\n")
     return True
 
 def purple_validate():
-    print("[PURPLE] Validando: Ataque foi bloqueado? SIM - Deception Grid funcionou!")
+    print("[PURPLE] Validando Deception Grid: BLOQUEIO OK!")
 
-# EXECUÇÃO 120%
 for i in range(3):
     ttp = red_team_emulate()
     time.sleep(1)
     blue_team_detect(ttp)
     purple_validate()
-    print("-"*40)
+    print("-"*48)
 
-print("\n✅ SABO-X PURPLE TEAM CONCLUÍDO - Log salvo em iocs.json")
+print("\n[FINAL] Execucao 120% concluida!")

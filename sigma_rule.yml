@@ -1,18 +1,66 @@
 detection:
-  ttp: T1110 Credential
-  action: block_ip
+  ttp: T1021.004 - SSH
+  action: block
+  time: 2026-10-09 23:45:54.015555
+
 detection:
-  ttp: T1110 Credential
-  action: block_ip
+  ttp: T1190 - Exploit
+  action: block
+  time: 2026-10-09 23:45:55.018610
+
 detection:
-  ttp: T1190 Exploit
-  action: block_ip
+  ttp: T1110 - Brute
+  action: block
+  time: 2026-10-09 23:45:56.020247
+
 detection:
-  ttp: T1021.004 SSH Brute
-  action: block_ip
+  ttp: T1190 - Exploit
+  action: block
+  time: 2026-10-09 23:48:00.842185
+
 detection:
-  ttp: T1110 Credential
-  action: block_ip
+  ttp: T1110 - Brute
+  action: block
+  time: 2026-10-09 23:48:01.848893
+
 detection:
-  ttp: T1190 Exploit
-  action: block_ip
+  ttp: T1110 - Brute
+  action: block
+  time: 2026-10-09 23:48:02.850634
+
+detection:
+  lab_ip: 127.0.0.1
+  ttp: T1190
+  action: block
+  time: 2026-10-09 23:52:41.066500
+
+detection:
+  lab_ip: 127.0.0.1
+  ttp: T1021.004
+  action: block
+  time: 2026-10-09 23:52:42.072359
+
+detection:
+  lab_ip: 127.0.0.1
+  ttp: T1190
+  action: block
+  time: 2026-10-09 23:52:43.074746
+
+detection:
+  lab_ip: 127.0.0.1
+  ttp: T1190
+  action: block
+  time: 2026-10-09 23:53:31.348522
+
+detection:
+  lab_ip: 127.0.0.1
+  ttp: T1110
+  action: block
+  time: 2026-10-09 23:53:32.354256
+
+detection:
+  lab_ip: 127.0.0.1
+  ttp: T1021.004
+  action: block
+  time: 2026-10-09 23:53:33.356174
+
